@@ -2,16 +2,15 @@
 
 int main() {
     int t1, t2, t3;
-    float total_time;
+    printf("Enter the time taken by the first guest to eat the cake (in hours): ");
+    scanf("%d", &t1);
+    printf("Enter the time taken by the second guest to eat the cake (in hours): ");
+    scanf("%d", &t2);
+    printf("Enter the time taken by the third guest to eat the cake (in hours): ");
+    scanf("%d", &t3);
 
-    // Зчитую вхідні дані
-    scanf("%d %d %d", &t1, &t2, &t3);
-
-    // Обчислюю загальний час
-    total_time = 1.0 / t1 + 1.0 / t2 + 1.0 / t3;
-
-    // Вивожу результат з округленням до 2 знаків після коми
-    printf("%.2f\n", 1.0 / total_time);
+    float total_time = 1 / ((1.0 / t1) + (1.0 / t2) + (1.0 / t3));
+    printf("The guests can eat the cake together in %.2f hours.", total_time);
 
     return 0;
 }
